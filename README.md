@@ -1,13 +1,15 @@
 # hs-stream
-play the videos from hotstar on linux
+
+Stream videos from hotstar
 
 ## Dependencies
 * livestreamer
 
-    to install livestreamer on Ubuntu:
+    To install livestreamer on Ubuntu:
 
-        sudo apt-get install livestreamer
+        $ sudo apt-get install livestreamer
     
-    to install livestreamer on Fedora:
+    To install livestreamer on Fedora:
 
-        dnf install livestreamer
+        $ sudo dnf install livestreamer
+
