@@ -51,7 +51,7 @@ def main():
 
     command = "livestreamer \"{0}\" \"{1}\" ".format(file_url, quality)
     if choice == "D" or choice == 'd':
-        command += "-o {2}".format(localFile)
+        command += "-o {0}".format(localFile)
     elif choice == "S" or choice == 's':
         info("Streaming ...")
     else:
