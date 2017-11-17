@@ -39,6 +39,7 @@ def getVideoFileUrl(video_id):
 
     # Downloading actual content now
     file_url = const.CDNURL.format(video_id)
+    print(file_url)
     cdn_resp = requests.get(file_url, headers=const.HEADERS)
     if cdn_resp.status_code != requests.codes.ok:
         err("Failed to get info about content")
@@ -86,7 +87,7 @@ def main(video_id=None, quality=None, saveOrStream='D'):
         else:
             choice = saveOrStream    
 
-        command = "livestreamer \"{0}\" \"{1}\" ".format(file_url, quality)
+        command = "streamlink \"{0}\" \"{1}\" ".format(file_url, quality)
         if choice == "D" or choice == 'd':
             command += "-o \"{0}\"".format(localFile)
         elif choice == "S" or choice == 's':
